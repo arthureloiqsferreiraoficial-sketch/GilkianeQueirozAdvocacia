@@ -1,178 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dra. Gilkiane Queiroz — Advocacia</title>
-  <meta name="description" content="Advocacia especializada. Atendimento humano e compromisso com seus direitos.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Gilkiane Queiroz</title>
+  <meta name="description" content="Advocacia Especializada e Atendimento. Com Dra. Gilkiane Queiroz. Nosso compromisso é com a sua tranquilidade e a defesa dos seus direitos, construindo um futuro mais seguro para você.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" href="favicon.png" type="image/png">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Ícone do site -->
+  <link rel="icon" href="IMG_20230706_073658_625-removebg-preview.png" type="image/png">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Básico -->
   <style>
-    :root{--bg:#0f1113;--card:#151718;--muted:#9aa1a6;--accent:#2b7cff;--glass:rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#0b0c0d 0%, #121314 100%);color:#e7eef8}
-    a{color:inherit}
-
-    /* layout */
-    .container{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:54px;height:54px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#8b4dff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
-    .brand h1{font-size:1.05rem;margin:0}
-    nav{display:flex;gap:12px}
-    nav a{padding:8px 12px;border-radius:8px;font-weight:600;color:var(--muted);text-decoration:none}
-    nav a.primary{background:var(--glass);color:#fff}
-
-    /* hero */
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:center;margin-top:36px}
-    .hero .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:14px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-    .eyebrow{color:var(--muted);font-size:0.85rem;margin-bottom:8px}
-    .hero h2{margin:0 0 12px 0;font-size:2rem;line-height:1.05}
-    .hero p{color:var(--muted);margin:0 0 18px 0}
-    .cta{display:flex;gap:12px}
-    .btn{padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
-    .btn-primary{background:var(--accent);color:white}
-    .btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
-
-    /* appointment card */
-    .appointment{background:linear-gradient(180deg, rgba(43,124,255,0.06), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:20px;border-radius:12px}
-    .appointment label{display:block;font-size:0.9rem;color:var(--muted);margin-bottom:6px}
-    .appointment input, .appointment textarea, .appointment select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
-    .small{font-size:0.9rem;color:var(--muted)}
-
-    /* services */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .service{background:var(--card);padding:18px;border-radius:12px}
-    .service h3{margin:0 0 8px 0}
-    .service p{margin:0;color:var(--muted);font-size:0.95rem}
-
-    footer{margin-top:40px;padding:18px 0;color:var(--muted);text-align:center}
-
-    /* responsive */
-    @media(max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
-    @media(max-width:560px){.grid{grid-template-columns:1fr}.container{padding:16px}.logo{width:44px;height:44px}}
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header {
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+    a.button {
+      display: inline-block;
+      background: #0077ff;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #0056cc;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">GQ</div>
-        <div>
-          <h1>Dra. Gilkiane Queiroz</h1>
-          <div class="small">Advocacia especializada</div>
-        </div>
-      </div>
+  <header>
+    <h1>Dra. Gilkiane Queiroz</h1>
+    <p>Advocacia Especializada e Atendimento. Nosso compromisso é com a sua tranquilidade e a defesa dos seus direitos, construindo um futuro mais seguro para você.</p>
+  </header>
 
-      <nav aria-label="menu">
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-        <a href="#" class="primary">Agendar</a>
-      </nav>
-    </header>
+  <main>
+    <a href="#contato" class="button">Agendar Consulta</a>
+  </main>
 
-    <section class="hero">
-      <div class="card">
-        <div class="eyebrow">Atendimento humanizado</div>
-        <h2>Defendendo seus direitos com dedicação e clareza</h2>
-        <p>Especialista em direito civil e consumerista. Atendimento personalizado com foco em soluções práticas e proteção ao cliente.</p>
-
-        <div class="cta">
-          <a href="#contato" class="btn btn-primary">Agendar Consulta</a>
-          <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
-        </div>
-
-        <div class="grid" style="margin-top:20px">
-          <div class="service">
-            <h3>Consultoria Preventiva</h3>
-            <p>Orientação para evitar conflitos e revisão de contratos.</p>
-          </div>
-          <div class="service">
-            <h3>Direito do Consumidor</h3>
-            <p>Acompanhamento de reclamações, ações e acordos.</p>
-          </div>
-          <div class="service">
-            <h3>Ações Judiciais</h3>
-            <p>Representação legal em processos cíveis e negociações.</p>
-          </div>
-        </div>
-      </div>
-
-      <aside class="appointment card">
-        <h3 style="margin-top:0">Agende sua consulta</h3>
-        <form id="formAgenda" onsubmit="return handleSubmit(event)">
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" required placeholder="Seu nome">
-
-          <label for="email" style="margin-top:8px">E-mail</label>
-          <input id="email" name="email" type="email" required placeholder="email@exemplo.com">
-
-          <label for="assunto" style="margin-top:8px">Assunto</label>
-          <select id="assunto" name="assunto">
-            <option>Consulta inicial</option>
-            <option>Reclamação de consumidor</option>
-            <option>Revisão contratual</option>
-          </select>
-
-          <label for="mensagem" style="margin-top:8px">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Breve descrição"></textarea>
-
-          <div style="display:flex;gap:8px;margin-top:12px">
-            <button type="submit" class="btn btn-primary" style="flex:1">Enviar</button>
-            <a href="tel:+550000000000" class="btn btn-outline" style="align-self:center">Ligar</a>
-          </div>
-
-          <div class="small" style="margin-top:12px">Atendimento por agendamento. Responderemos por e-mail.</div>
-        </form>
-      </aside>
-    </section>
-
-    <section id="servicos" style="margin-top:28px">
-      <h3 style="margin-bottom:12px">Serviços</h3>
-      <div class="grid">
-        <div class="service"><h3>Direito Civil</h3><p>Contratos, propriedades, inventários e muito mais.</p></div>
-        <div class="service"><h3>Consumidor</h3><p>Defesa em casos de prática abusiva, garantia e devolução.</p></div>
-        <div class="service"><h3>Família</h3><p>Acordos, guarda e tutela com sensibilidade profissional.</p></div>
-        <div class="service"><h3>Empresarial</h3><p>Assessoria para pequenas empresas e contratos comerciais.</p></div>
-        <div class="service"><h3>Tributário</h3><p>Orientação inicial e análise fiscal estratégica.</p></div>
-        <div class="service"><h3>Mediação</h3><p>Soluções extrajudiciais com foco em acordo.</p></div>
-      </div>
-    </section>
-
-    <section id="contato" style="margin-top:32px;display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
-      <div class="card" style="padding:18px">
-        <h3>Contato</h3>
-        <p class="small">Escritório: Rua Exemplo, 123 — Cidade — Estado</p>
-        <p class="small">Telefone: <a href="tel:+550000000000">(00) 0000-0000</a></p>
-        <p class="small">E-mail: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
-      </div>
-
-      <div class="card" style="padding:14px">
-        <h4 style="margin-top:0">Horário de atendimento</h4>
-        <p class="small">Seg — Sex: 9h — 18h<br>Sáb: 9h — 12h</p>
-      </div>
-    </section>
-
-    <footer>
-      <div class="small">© 2025 Dra. Gilkiane Queiroz — Todos os direitos reservados.</div>
-    </footer>
-  </div>
-
-  <script>
-    function handleSubmit(e){
-      e.preventDefault();
-      const nome = document.getElementById('nome').value.trim();
-      const email = document.getElementById('email').value.trim();
-      if(!nome||!email){alert('Preencha nome e e-mail');return false}
-      // aqui você pode conectar com um endpoint real (ex: Formspree, Netlify Forms, ou sua API)
-      alert('Mensagem enviada! Em breve responderemos por e-mail.');
-      e.target.reset();
-      return false;
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025 Dra. Gilkiane Queiroz - Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
