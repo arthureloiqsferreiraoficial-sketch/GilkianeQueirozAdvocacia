@@ -1,90 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dra. Gilkiane Queiroz</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9fafb; color: #333; }
-    header { background: #fff; padding: 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    header h1 { font-size: 24px; color: #1e3a8a; }
-    header a { background: #1d4ed8; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 10px; }
-    header a:hover { background: #1e40af; }
+    :root{
+      --blue-900:#1e3a8a;
+      --blue-700:#1d4ed8;
+      --green-600:#16a34a;
+      --bg:#f9fafb;
+      --card:#ffffff;
+      --text:#333;
+    }
 
-    section { padding: 50px 20px; text-align: center; }
-    .hero { background: #eff6ff; }
-    .hero h2 { font-size: 28px; color: #1e3a8a; margin-bottom: 15px; }
-    .hero p { max-width: 700px; margin: auto; color: #555; }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
 
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; }
-    .card { background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .card h3 { font-size: 20px; color: #1e40af; margin-bottom: 10px; }
+    header{
+      background:var(--card);
+      padding:20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      box-shadow:0 2px 6px rgba(16,24,40,0.06);
+    }
+    header h1{
+      margin:0;
+      color:var(--blue-900);
+      font-size:20px;
+      font-weight:700;
+    }
+    .btn-primary{
+      background:var(--blue-700);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      display:inline-block;
+      font-weight:600;
+    }
+    .btn-primary:hover{filter:brightness(.95)}
 
-    .sobre { background: #fff; }
-    .sobre h3 { font-size: 24px; color: #1e3a8a; margin-bottom: 15px; }
-    .sobre p { max-width: 800px; margin: auto; color: #555; }
+    .hero{
+      background:#eff6ff;
+      padding:56px 20px;
+      text-align:center;
+    }
+    .hero h2{
+      margin:0 0 12px 0;
+      color:var(--blue-900);
+      font-size:28px;
+    }
+    .hero p{
+      max-width:760px;
+      margin:0 auto;
+      color:#555;
+    }
 
-    .contato { background: #eff6ff; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; text-align: left; }
-    .contato h3 { font-size: 24px; color: #1e3a8a; margin-bottom: 15px; }
-    .contato ul { list-style: none; padding: 0; }
-    .contato li { margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-    .contato a { background: #16a34a; color: #fff; padding: 15px 20px; text-decoration: none; border-radius: 10px; display: inline-block; }
-    .contato a:hover { background: #15803d; }
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      padding:36px 20px;
+      max-width:1100px;
+      margin:0 auto;
+    }
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:14px;
+      box-shadow:0 6px 18px rgba(16,24,40,0.06);
+    }
+    .card h3{
+      margin:0 0 8px 0;
+      color:var(--blue-900);
+      font-size:18px;
+    }
+    .card p{margin:0;color:#555}
 
-    footer { background: #1e3a8a; color: #fff; text-align: center; padding: 15px; }
+    .sobre{
+      background:var(--card);
+      padding:42px 20px;
+      text-align:center;
+    }
+    .sobre h3{margin:0 0 12px 0;color:var(--blue-900);font-size:22px}
+    .sobre p{max-width:900px;margin:0 auto;color:#555}
+
+    .contato{
+      background:#eff6ff;
+      padding:36px 20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+      max-width:1100px;
+      margin:0 auto;
+      align-items:center;
+    }
+    .contato h3{margin:0 0 12px 0;color:var(--blue-900);font-size:20px}
+    .contato ul{padding:0;margin:0;list-style:none;color:#222}
+    .contato li{margin-bottom:10px}
+    .whatsapp-btn{
+      display:inline-block;
+      background:var(--green-600);
+      color:#fff;
+      padding:14px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+    .whatsapp-btn:hover{filter:brightness(.96)}
+
+    footer{
+      background:var(--blue-900);
+      color:#fff;
+      text-align:center;
+      padding:14px 10px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:560px){
+      .hero{padding:40px 16px}
+      .hero h2{font-size:22px}
+      header h1{font-size:18px}
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Dra. Gilkiane Queiroz</h1>
-    <a href="https://wa.me/5587988721833?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Gilkiane%20Queiroz." target="_blank">Agendar Consulta</a>
+    <a class="btn-primary" id="agendarLink" href="#" target="_blank" rel="noopener noreferrer">Agendar Consulta</a>
   </header>
 
-  <section class="hero">
-    <h2>Advocacia Especializada e Atendimento</h2>
-    <p>Nosso compromisso é com a sua tranquilidade e a defesa dos seus direitos, construindo um futuro mais seguro para você.</p>
-  </section>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Advocacia Especializada e Atendimento</h2>
+      <p>Nosso compromisso é com a sua tranquilidade e a defesa dos seus direitos, construindo um futuro mais seguro para você.</p>
+    </section>
 
-  <section class="cards">
-    <div class="card">
-      <h3>Flexibilidade Total</h3>
-      <p>Escolha o dia e horário que melhor se encaixam na sua agenda.</p>
-    </div>
-    <div class="card">
-      <h3>Chat Direto</h3>
-      <p>Converse diretamente com a Dra. Gilkiane via WhatsApp.</p>
-    </div>
-    <div class="card">
-      <h3>Confirmação Rápida</h3>
-      <p>Receba confirmação instantânea do seu agendamento.</p>
-    </div>
-  </section>
+    <section class="cards" aria-label="beneficios">
+      <article class="card">
+        <h3>Flexibilidade Total</h3>
+        <p>Escolha o dia e horário que melhor se encaixam na sua agenda.</p>
+      </article>
 
-  <section class="sobre">
-    <h3>Sobre a Dra. Gilkiane Queiroz</h3>
-    <p>Advogada com ampla experiência em Direito Previdenciário, Direito Criminal, Direito Consultivo e Terceiro Setor. Reconhecida por sua atuação ética e comprometida com as melhores soluções para seus clientes.</p>
-  </section>
+      <article class="card">
+        <h3>Chat Direto</h3>
+        <p>Converse diretamente com a Dra. Gilkiane via WhatsApp.</p>
+      </article>
 
-  <section class="contato">
-    <div>
-      <h3>Fale Conosco</h3>
-      <ul>
-        <li>📞 (87) 98872-1833</li>
-        <li>✉️ gilkianequeiroz@yahoo.com.br</li>
-        <li>💬 WhatsApp: (87) 98872-1833</li>
-        <li>📍 Rua Frei Domingos, Nº21, Quadra 02, Petrolândia/PE</li>
-        <li>🕑 Seg a Sex: 09h às 18h</li>
-      </ul>
-    </div>
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <a href="https://wa.me/5587988721833?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">📲 Fale pelo WhatsApp</a>
-    </div>
-  </section>
+      <article class="card">
+        <h3>Confirmação Rápida</h3>
+        <p>Receba confirmação instantânea do seu agendamento.</p>
+      </article>
+    </section>
+
+    <section class="sobre" aria-labelledby="sobre-title">
+      <h3 id="sobre-title">Sobre a Dra. Gilkiane Queiroz</h3>
+      <p>Advogada com ampla experiência em Direito Previdenciário, Direito Criminal, Direito Consultivo e Terceiro Setor. Reconhecida por sua atuação ética e comprometida com as melhores soluções para seus clientes.</p>
+    </section>
+
+    <section class="contato" aria-label="contato">
+      <div>
+        <h3>Fale Conosco</h3>
+        <ul>
+          <li>📞 (87) 98872-1833</li>
+          <li>✉️ gilkianequeiroz@yahoo.com.br</li>
+          <li>💬 WhatsApp: (87) 98872-1833</li>
+          <li>📍 Rua Frei Domingos, Nº21, Quadra 02, Petrolândia/PE</li>
+          <li>🕑 Seg a Sex: 09h às 18h</li>
+        </ul>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:center;">
+        <a class="whatsapp-btn" id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer">📲 Fale pelo WhatsApp</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Dra. Gilkiane Queiroz - Todos os direitos reservados.</p>
+    <p id="copyright">© <span id="year">2025</span> Dra. Gilkiane Queiroz - Todos os direitos reservados.</p>
   </footer>
 
+  <script>
+    // link pronto do WhatsApp (mensagem inicial)
+    const waNumber = "5587988721833";
+    const waMsg = encodeURIComponent("Olá, gostaria de agendar uma consulta com a Dra. Gilkiane Queiroz. Por favor, me informe os horários disponíveis.");
+    const waLink = `https://wa.me/${waNumber}?text=${waMsg}`;
+
+    // aplicando nos botões
+    document.getElementById('agendarLink').href = waLink;
+    document.getElementById('whatsappBtn').href = waLink;
+
+    // atualiza o ano do rodapé dinamicamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
