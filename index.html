@@ -82,7 +82,11 @@
         <p>Especialista em direito civil e consumerista. Atendimento personalizado com foco em soluções práticas e proteção ao cliente.</p>
 
         <div class="cta">
-          <a href="#contato" class="btn btn-primary">Agendar Consulta</a>
+          <a href="https://api.whatsapp.com/send/?phone=5587988721833&text&type=phone_number&app_absent=0" 
+             target="_blank" 
+             class="btn btn-primary">
+             Agendar via WhatsApp
+          </a>
           <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
         </div>
 
@@ -104,30 +108,17 @@
 
       <aside class="appointment card">
         <h3 style="margin-top:0">Agende sua consulta</h3>
-        <form id="formAgenda" onsubmit="return handleSubmit(event)">
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" required placeholder="Seu nome">
-
-          <label for="email" style="margin-top:8px">E-mail</label>
-          <input id="email" name="email" type="email" required placeholder="email@exemplo.com">
-
-          <label for="assunto" style="margin-top:8px">Assunto</label>
-          <select id="assunto" name="assunto">
-            <option>Consulta inicial</option>
-            <option>Reclamação de consumidor</option>
-            <option>Revisão contratual</option>
-          </select>
-
-          <label for="mensagem" style="margin-top:8px">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Breve descrição"></textarea>
-
-          <div style="display:flex;gap:8px;margin-top:12px">
-            <button type="submit" class="btn btn-primary" style="flex:1">Enviar</button>
-            <a href="tel:+5587988721833" class="btn btn-outline" style="align-self:center">Ligar</a>
-          </div>
-
-          <div class="small" style="margin-top:12px">Atendimento por agendamento. Responderemos por e-mail.</div>
-        </form>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <!-- Botão do WhatsApp -->
+          <a href="https://api.whatsapp.com/send/?phone=5587988721833&text&type=phone_number&app_absent=0" 
+             target="_blank" 
+             class="btn btn-primary" 
+             style="flex:1;text-align:center">
+             Agendar via WhatsApp
+          </a>
+          <a href="tel:+5587988721833" class="btn btn-outline" style="align-self:center">Ligar</a>
+        </div>
+        <div class="small" style="margin-top:12px">Atendimento por agendamento. Responderemos por e-mail.</div>
       </aside>
     </section>
 
@@ -153,7 +144,6 @@
         </div>
       </div>
     </section>
-    <!-- FIM DA NOVA LISTA -->
 
     <section id="contato" style="margin-top:32px;display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
       <div class="card" style="padding:18px">
